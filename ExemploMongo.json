@@ -1,0 +1,45 @@
+
+//inserir documento
+db.dishes.insert({name:"Uthapizza",description: "Test"})
+
+
+
+
+//|Consultar Documento sem formatação
+> db.dishes.find()
+{ "_id" : ObjectId("5818bdfa31d78ac9d8ed2543"), "name" : "Uthapizza", "description" : "Test" }
+{ "_id" : ObjectId("5818be3331d78ac9d8ed2544"), "name" : "Uthapizza", "description" : "Test" }
+{ "_id" : ObjectId("5818be3c31d78ac9d8ed2545"), "name" : "Uthapizza", "description" : "Test" }
+
+
+
+//|Consultar Documento com formatação
+db.dishes.find().pretty();
+{
+       "_id" : ObjectId("5818bdfa31d78ac9d8ed2543"),
+       "name" : "Uthapizza",
+       "description" : "Test"
+}
+{
+       "_id" : ObjectId("5818be3331d78ac9d8ed2544"),
+       "name" : "Uthapizza",
+       "description" : "Test"
+}
+{
+       "_id" : ObjectId("5818be3c31d78ac9d8ed2545"),
+       "name" : "Uthapizza",
+       "description" : "Test"
+}
+
+//declarar campo do documento
+ var id= new Object()
+> id
+{ }
+> var id = new ObjectId();
+> id
+ObjectId("5818bfb931d78ac9d8ed2546")
+
+//trocar tipo de campo do documento
+> id.getTimestamp()
+ISODate("2016-11-01T16:15:53Z")
+>
