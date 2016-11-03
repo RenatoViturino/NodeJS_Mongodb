@@ -3,15 +3,15 @@ var mongoose = require('mongoose'),
 
 var Dishes = require('./models/dishes-3');
 
-// Connection URL
+
 var url = 'mongodb://localhost:27017/confusion';mongoose.connect(url);
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function () {
-    // we're connected!
+
     console.log("Connected correctly to server");
 
-    // create a new dish
+
     Dishes.create({
         name: 'Uthapizza',
         description: 'Test',
@@ -29,7 +29,7 @@ db.once('open', function () {
 
         var id = dish._id;
 
-        // get all the dishes
+
         setTimeout(function () {
             Dishes.findByIdAndUpdate(id, {
                     $set: {
