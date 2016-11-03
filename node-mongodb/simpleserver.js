@@ -2,7 +2,7 @@ var MongoClient= require('mongodb').MongoClient,
  assert= require('assert');
 
 //Conection URL
-var url = 'mongodb://localhost:27017/conFusion';
+var url = 'mongodb://localhost:27017/confusion';
 
 // Use connect method to connect to the Server
 MongoClient.connect(url,function (err,db) {
